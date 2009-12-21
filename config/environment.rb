@@ -19,6 +19,21 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  
+  config.gem "gemcutter"
+  
+  config.with_options :source => "http://gemcutter.org" do |c|
+    c.gem "haml"   
+    c.gem "rcov", :version => ">=0.9.6"                                                                    
+    c.gem "rspec", :lib => "spec", :version => ">=1.2.9"                                                   
+    c.gem "rspec-rails", :lib => "spec/rails", :version => ">=1.2.9"                                       
+    c.gem "cucumber", :version => ">=0.5.1"                                                                
+    c.gem "webrat", :version => ">=0.6.0"
+    c.gem "ZenTest", :version => ">=4.2.1"
+    c.gem "factory_girl", :version => ">=1.2.2"
+    c.gem "autotest-notification", :version => ">=2.1.0"
+  end
+
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
